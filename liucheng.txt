@@ -1,0 +1,15 @@
+1.读取input文件夹中的svs文件，使用CLAM来提取WSI的多尺度特征，分别运行python create_patch_fp_256.py,create_patches_fp_512.py，create_patch_fp_1024.py等待上面的py文件执行完成。
+2.执行python extract_features_fp_256.py,python extract_features_fp_512.py,python extract_features_fp_1024.py文件
+3.获取WSI的空间拓扑图，执行python run_wsi_inference.py，等待执行结束，运行python summarize_tme_features.py文件等待执行结束
+4构建WSI和TME的空间拓扑图执行python constract_graph_TME.py,python constract_graph_multi_view.py等待执行结束
+5.执行test.py文件,等待程序执行结束
+6将ouput文件夹中的以.slide_img.png结尾的文件显示在界面的original WSI上，将ouput文件夹中的以.density_img.png结尾的文件显示在界面的TME上
+7，将genetic_analysis.xlsx变成页面可下载的文件
+及时下载数据或者自动下载数据后，2分钟后自动运行python delete.py文件
+
+可视化界面的example显示原始图，密度图，genetic_analysis.xlsx中的内容（所有文件在example中），提供可以下载的链接
+
+网站的题目是：肺癌关键基因突变与外显子预测（Key Gene Mutations and Exon Prediction in Lung Cancer）
+论文：Liangrui Pan, Jiadi Luo,Songqing Fan, Chenchen Nie, Xiaoyu Li, Yiyi Liang, Shaoliang Peng, Xiang Wang, Qingchun Liang；Multi-view Multi-instance Learning for Accurate Prediction of Gene Mutations in Lung Cancer Histopathological Images
+logo.jpg文件是我们的logo
+https://github.com/panliangrui/NAVF-Bio是代码链接
